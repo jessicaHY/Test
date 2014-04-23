@@ -8,17 +8,6 @@ AV.Cloud.define("hello", function(request, response) {
 });
 
 AV.Cloud.beforeSave("_Notification", function(req, res){
-    var user = AV.User.current();
-    if (!user)
-        res.error("error!")
-    var query = new AV.Query(AV.User)
-    query.get(user.objectId, {
-        success: function(user){
-            res.success(user);
-        },
-        error: function(user, error) {
-            res.error("error!");
-        }
-    })
+    res.error("error!");
 })
 
