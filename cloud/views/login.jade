@@ -1,0 +1,13 @@
+doctype html
+head
+    include inc/_basic
+body
+  .container
+    h1 Sign in
+    form(method="post")
+      .form-group
+        label Email
+        input.form-control(type="text", name="email")
+        label Password
+        input.form-control(type="password", name="password")
+      button.btn.btn-primary(type="submit") Sign in
