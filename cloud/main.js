@@ -11,3 +11,6 @@ AV.Cloud.beforeSave("_Notification", function(req, res){
     res.error("error!");
 })
 
+AV.Cloud.beforeSave("AndroidScore", function(req, res){
+    res.error("error!");
+})
