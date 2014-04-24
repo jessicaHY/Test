@@ -8,9 +8,11 @@ AV.Cloud.define("hello", function(request, response) {
 });
 
 AV.Cloud.beforeSave("_Notification", function(req, res){
+    console.error("notification before save!!!")
     res.error("error!");
 })
 
 AV.Cloud.beforeSave("AndroidScore", function(req, res){
+    console.error("AndroidScore before save!!!")
     res.error("error!");
 })
