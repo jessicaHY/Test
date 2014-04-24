@@ -12,7 +12,23 @@ AV.Cloud.beforeSave("_Notification", function(req, res){
     res.error("error!");
 })
 
+
+AV.Cloud.afterSave("_Notification", function(req, res){
+    console.error("notification after save!!!")
+    res.error("error!");
+})
+
 AV.Cloud.beforeSave("AndroidScore", function(req, res){
     console.error("AndroidScore before save!!!")
+    res.error("error!");
+})
+
+AV.Cloud.beforeSave("_User", function(req, res){
+    console.error("_User before save!!!")
+    res.error("error!");
+})
+
+AV.Cloud.afterSave("_User", function(req, res){
+    console.error("_User after save!!!")
     res.error("error!");
 })
