@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 AV.Cloud.define("accountsRegister", function(request, response) {
     var user = new AV.User();
     user.set("email", request.params.email);
@@ -33,8 +35,6 @@ AV.Cloud.define("accountsLogin", function(request, response) {
 //        }, function(role, error) {
 //
 //        });
-
-
         response.success(user)
     }, function(user, error) {
         console.log("error :" + error.code + "___________" + error.message);
@@ -42,6 +42,13 @@ AV.Cloud.define("accountsLogin", function(request, response) {
     })
 
 });
+
+AV.Cloud.define("createDir", function(req, res) {
+    fs.mkdir("a", function(a,b,c) {
+        console.error(a, b, c);
+    });
+    res.success("create dir over");
+})
 
 AV.Cloud.define("accountsModifyName", function(request, response) {
     var user = AV.User.current();
