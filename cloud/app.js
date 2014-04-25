@@ -1,5 +1,6 @@
 // 在 Cloud code 里初始化 Express 框架
 var express = require('express');
+var fs = require('fs');
 var app = express();
 //var avosExpressCookieSession = require('avos-express-cookie-session')
 
@@ -35,6 +36,16 @@ app.post("/login", function(req, res){
 app.get('/register', function(req, res) {
     res.render('register');
 });
+
+app.get('/createDir', function(req, res) {
+    fs.mkdir("a", function(abc) {
+        console.error("createDir error: ", abc);
+        fs.readdir("a", function(err, files) {
+            console.error(err, files.length)
+            res.send("aaaaaaaaaaaaaaa");
+        })
+    })
+})
 
 app.post("/register", function(req, res){
 
