@@ -42,7 +42,7 @@ app.get('/createDir', function(req, res) {
         console.error("createDir error: ", abc);
         fs.readdir("a", function(err, files) {
             console.error(err, files.length)
-            res.send("aaaaaaaaaaaaaaa");
+            res.send("aaaaaaaaaaaaaaa  ...");
         })
     })
 })
