@@ -47,7 +47,7 @@ AV.Cloud.define("createDir", function(req, res) {
     fs.mkdir("a", function(a,b,c) {
         console.error(a, b, c);
     });
-    res.success("create dir over");
+    res.success("create dir over ...");
 })
 
 AV.Cloud.define("accountsModifyName", function(request, response) {
